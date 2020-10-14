@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>11ty local</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body class="stopped">
+    <h1 class="hide-stopped">11ty running</h1>
+    <h1 class="hide-started">11ty stopped</h1>
+    <form onsubmit="run(event.submitter.getAttribute('data-cmd')); event.preventDefault()">
+      <button class="hide-started" data-cmd="start">Start</button>
+      <button class="hide-stopped" data-cmd="stop">Stop</button>
+      <input id="path" type="text" name="path" class="disable-started" onkeyup="updatePath(event.target.value, () => event.preventDefault())"/>
+    </form>
+    <div id="filesList" class="hide-stopped"></div>
+    <template id="filesListTemplate">
+      <li><span class="inputPath"></span> =&gt; <span class="outputPath"></span></li>
+    </template>
+    <p class="hide-stopped">You can access your website from http://localhost:8080/</p>
+    <script defer src="client.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.started .hide-started,
+.stopped .hide-stopped {
+  display: none;
+}
+
+.started .disable-started,
+.stopped .disable-stopped {
+  background-color: rgba(59, 59, 59, 0.3);
+  border-color: rgba(118, 118, 118, 0.3);
+  pointer-events: none;
+}
