@@ -1,3 +1,12 @@
+## Road map
+
+Alpha version
+
+* [x] Watch and build with 11ty
+* [x] Serve preview site
+* [ ] Display build errors
+* [ ] Github action to build releases for Windows and MacOS
+
 ## Use
 
 1. Download latest release
