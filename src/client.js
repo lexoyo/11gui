@@ -39,6 +39,7 @@ async function start() {
     st({
       path: inputPath + '/_site',
       cache: false,
+      index: 'index.html',
     })
   ).listen(8080)
   
